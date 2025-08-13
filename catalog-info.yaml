@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: python-obvbfvfr-gitops
+  description: This is GitOps manifest for python-obvbfvfr   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: tssc/gitops=python-obvbfvfr
+    backstage.io/kubernetes-id: python-obvbfvfr 
+    backstage.io/techdocs-ref: dir:. 
+    github.com/project-slug: chetna14manku-org/python-obvbfvfr-gitops
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:python-obvbfvfr
